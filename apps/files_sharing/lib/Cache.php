@@ -74,11 +74,7 @@ class Cache extends CacheJail {
 	}
 
 	public function getNumericStorageId() {
-		if (isset($this->numericId)) {
-			return $this->numericId;
-		} else {
-			return false;
-		}
+		return $this->sourceCache->getNumericStorageId();
 	}
 
 	protected function formatCacheEntry($entry) {
